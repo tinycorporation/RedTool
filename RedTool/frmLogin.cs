@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 namespace RedTool
 {
     public partial class frmLogin : Form
-    {
+    { //test
         public frmLogin()
         {
             InitializeComponent();
