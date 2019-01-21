@@ -29,7 +29,7 @@ namespace RedTool
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Hidden) {
-                panel1.Width += 20;
+                panel1.Width += 200;
                 if (panel1.Width >= PW)
                 {
                     panel1.Width = PW;
@@ -39,7 +39,7 @@ namespace RedTool
                     this.Refresh();
                 }
             } else{
-                panel1.Width -= 20;
+                panel1.Width -= 200;
                 if (panel1.Width <= 32)
                 {
                     panel1.Width = 32;
@@ -50,6 +50,16 @@ namespace RedTool
 
                 }
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void lblCredits_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Credits", "Title", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

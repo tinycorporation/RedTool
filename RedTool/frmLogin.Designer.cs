@@ -160,7 +160,7 @@
             // 
             // picExit
             // 
-            this.picExit.BackgroundImage = global::RedTool.Properties.Resources.cancel_music;
+            this.picExit.BackgroundImage = global::RedTool.Properties.Resources.error;
             this.picExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picExit.Location = new System.Drawing.Point(297, 0);
             this.picExit.Name = "picExit";
