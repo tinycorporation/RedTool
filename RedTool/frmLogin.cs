@@ -40,6 +40,11 @@ namespace RedTool
                 streamReader.Close();
             }
             catch { }
+
+            if (!(txtPassword.Text == "Password"))
+            {
+                txtPassword.PasswordChar = '●';
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -47,7 +52,7 @@ namespace RedTool
 
             /* Login Button */
 
-            Settings.Username = txtUsername.Text;
+            /*Settings.Username = txtUsername.Text;
             Settings.Password = txtPassword.Text;
 
             if (string.IsNullOrEmpty(Settings.Username)) return;
@@ -103,7 +108,11 @@ namespace RedTool
                     MessageBox.Show("connection error");
 
                     break;
-            }
+            }*/
+            var Form2 = new frmMain();
+            Hide();
+            Form2.Closed += (s, args) => Close();
+            Form2.Show();
 
         }
 
@@ -151,10 +160,14 @@ namespace RedTool
                     break;
             }
         }
-
+        bool Clicked1 = false;
         private void txtUsername_Click(object sender, EventArgs e)
         {
-            txtUsername.Clear();
+            if (Clicked1 == false)
+            {
+                txtUsername.Clear();
+                Clicked1 = true;
+            }
             panel1.ForeColor = Color.FromArgb(78, 184, 206);
             txtUsername.ForeColor = Color.FromArgb(78, 184, 206);
 
@@ -162,10 +175,14 @@ namespace RedTool
             txtPassword.ForeColor = Color.WhiteSmoke;
 
         }
-
+        bool Clicked2 = false;
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            txtPassword.Clear();
+            if (Clicked2 == false)
+            {
+                txtPassword.Clear();
+                Clicked2 = true;
+            }
             txtPassword.PasswordChar = '●';
             panel2.ForeColor = Color.FromArgb(78, 184, 206);
             txtPassword.ForeColor = Color.FromArgb(78, 184, 206);

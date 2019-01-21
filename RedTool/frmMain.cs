@@ -35,7 +35,7 @@ namespace RedTool
                     panel1.Width = PW;
                     timer1.Stop();
                     Hidden = false;
-                    pictureBox1.Image = Properties.Resources.cancel_music;
+                    pictureBox1.Image = Properties.Resources.hide;
                     this.Refresh();
                 }
             } else{
@@ -45,7 +45,7 @@ namespace RedTool
                     panel1.Width = 32;
                     timer1.Stop();
                     Hidden = true;
-                    pictureBox1.Image = Properties.Resources.menu_button_of_three_horizontal_lines;
+                    pictureBox1.Image = Properties.Resources.view;
                     this.Refresh();
 
                 }

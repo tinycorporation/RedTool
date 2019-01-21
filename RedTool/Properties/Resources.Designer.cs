@@ -93,6 +93,16 @@ namespace RedTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hide {
+            get {
+                object obj = ResourceManager.GetObject("hide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hide_interface_symbol__1_ {
             get {
                 object obj = ResourceManager.GetObject("hide-interface-symbol (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace RedTool.Properties {
         internal static System.Drawing.Bitmap menu_button_of_three_horizontal_lines {
             get {
                 object obj = ResourceManager.GetObject("menu-button-of-three-horizontal-lines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view {
+            get {
+                object obj = ResourceManager.GetObject("view", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
