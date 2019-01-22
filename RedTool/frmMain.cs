@@ -61,5 +61,33 @@ namespace RedTool
         {
             MessageBox.Show("Credits", "Title", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        bool Settings1 = false;
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if(Settings1 == false)
+            {
+                panel5.Visible = true;
+                Settings1 = true;
+            }
+            else
+            {
+                panel5.Visible = false;
+                Settings1 = false;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (Settings1 == false)
+            {
+                panel5.Visible = true;
+                Settings1 = true;
+            }
+            else
+            {
+                panel5.Visible = false;
+                Settings1 = false;
+            }
+        }
     }
 }

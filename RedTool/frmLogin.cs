@@ -52,7 +52,7 @@ namespace RedTool
 
             /* Login Button */
 
-            /*Settings.Username = txtUsername.Text;
+            Settings.Username = txtUsername.Text;
             Settings.Password = txtPassword.Text;
 
             if (string.IsNullOrEmpty(Settings.Username)) return;
@@ -108,11 +108,7 @@ namespace RedTool
                     MessageBox.Show("connection error");
 
                     break;
-            }*/
-            var Form2 = new frmMain();
-            Hide();
-            Form2.Closed += (s, args) => Close();
-            Form2.Show();
+            }
 
         }
 
@@ -120,7 +116,7 @@ namespace RedTool
         {
 
             /* Register Button */
-            if (txtUsername.MaxLength < 20)
+            if (txtUsername.MaxLength > 20)
 
             {
                 Settings.Username = txtUsername.Text;
@@ -128,7 +124,7 @@ namespace RedTool
             }
             else
             {
-                MessageBox.Show("Username is too long or too short.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username is too long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
