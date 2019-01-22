@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblRedTool = new System.Windows.Forms.Label();
             this.picUsername = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,7 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.chkRemember = new System.Windows.Forms.CheckBox();
             this.picExit = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
@@ -73,6 +75,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(81, 105);
+            this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(208, 22);
             this.txtUsername.TabIndex = 2;
@@ -167,7 +170,7 @@
             this.picExit.Size = new System.Drawing.Size(40, 40);
             this.picExit.TabIndex = 12;
             this.picExit.TabStop = false;
-            this.picExit.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picExit.Click += new System.EventHandler(this.picExit_Click);
             // 
             // frmLogin
             // 
@@ -212,6 +215,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox chkRemember;
         private System.Windows.Forms.PictureBox picExit;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

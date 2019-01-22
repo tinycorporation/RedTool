@@ -114,47 +114,10 @@ namespace RedTool
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
-            /* Register Button */
-            if (txtUsername.MaxLength > 20)
-
-            {
-                Settings.Username = txtUsername.Text;
-                Settings.Password = txtPassword.Text;
-            }
-            else
-            {
-                MessageBox.Show("Username is too long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-            if (string.IsNullOrEmpty(Settings.Username)) return;
-            if (string.IsNullOrEmpty(Settings.Password)) return;
-
-
-            var temp = Extensions.Authentication.Register(
-                Settings.Username,
-                Settings.Password);
-
-            dynamic Results = JsonConvert.DeserializeObject(temp);
-
-            switch (bool.Parse(Results.Authenticated.ToString()))
-            {
-                case true:
-                    MessageBox.Show(Results.Description.ToString());
-
-                    break;
-
-                case false:
-                    MessageBox.Show(Results.Description.ToString());
-
-                    break;
-
-                default:
-                    MessageBox.Show("connection error");
-
-                    break;
-            }
+            var FormRegister = new frmRegister();
+            Hide();
+            FormRegister.Closed += (s, args) => Close();
+            FormRegister.Show();
         }
         bool Clicked1 = false;
         private void txtUsername_Click(object sender, EventArgs e)
@@ -187,7 +150,7 @@ namespace RedTool
             txtUsername.ForeColor = Color.WhiteSmoke;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void picExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
@@ -226,5 +189,6 @@ namespace RedTool
             panel1.ForeColor = Color.WhiteSmoke;
             txtUsername.ForeColor = Color.WhiteSmoke;
         }
+        
     }
 }

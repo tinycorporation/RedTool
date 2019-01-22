@@ -32,3 +32,4 @@ C:\Users\RondAlexanderKullese\Source\Repos\RedTool\RedTool\obj\Debug\RedTool.csp
 C:\Users\RondAlexanderKullese\Source\Repos\RedTool\RedTool\obj\Debug\RedTool.csproj.CopyComplete
 C:\Users\RondAlexanderKullese\Source\Repos\RedTool\RedTool\obj\Debug\RedTool.exe
 C:\Users\RondAlexanderKullese\Source\Repos\RedTool\RedTool\obj\Debug\RedTool.pdb
+C:\Users\RondAlexanderKullese\source\repos\RedTool\RedTool\obj\Debug\RedTool.frmRegister.resources

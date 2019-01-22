@@ -33,7 +33,7 @@ namespace RedTool
                 }
             }
 
-            public static string Register(string Username, string Password)
+            public static string Register(string Username, string Password, string Email)
             {
                 using (System.Net.WebClient WebClient = new System.Net.WebClient())
                 {
@@ -44,7 +44,8 @@ namespace RedTool
                     var data = new System.Collections.Specialized.NameValueCollection
                     {
                         ["Username"] = Username,
-                        ["Password"] = Password
+                        ["Password"] = Password,
+                        ["Email"] = Email
                     };
 
                     byte[] Response = WebClient.UploadValues(Settings.Website + "loader/php/Register.php", data);
