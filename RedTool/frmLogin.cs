@@ -199,7 +199,11 @@ namespace RedTool
 
         private void txtPassword_Enter(object sender, EventArgs e)
         {
-            txtPassword.Clear();
+            if (Clicked2 == false)
+            {
+                txtPassword.Clear();
+                Clicked2 = true;
+            }
             txtPassword.PasswordChar = '●';
             panel2.ForeColor = Color.FromArgb(78, 184, 206);
             txtPassword.ForeColor = Color.FromArgb(78, 184, 206);
@@ -210,7 +214,11 @@ namespace RedTool
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
-            txtPassword.Clear();
+            if (Clicked1 == false)
+            {
+                txtUsername.Clear();
+                Clicked1 = true;
+            }
             txtPassword.PasswordChar = '●';
             panel2.ForeColor = Color.FromArgb(78, 184, 206);
             txtPassword.ForeColor = Color.FromArgb(78, 184, 206);
