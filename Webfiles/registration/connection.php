@@ -18,7 +18,6 @@ $Adminuser = $Settings['Admin']['Username'];
 $Adminpass = $Settings['Admin']['Password'];
 
 $Usertable = $Settings['Tables']['Usertable'];
-$Emailtable = $Settings['Tables']['Emailtable'];
 
 # Connect to Server
 
