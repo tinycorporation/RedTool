@@ -160,10 +160,10 @@ namespace RedTool
 
         private void txtEmail_Enter(object sender, EventArgs e)
         {
-            if (Clicked2 == false)
+            if (Clicked3 == false)
             {
                 txtEmail.Clear();
-                Clicked2 = true;
+                Clicked3 = true;
             }
             txtEmail.ForeColor = Color.FromArgb(78, 184, 206);
 
@@ -182,6 +182,9 @@ namespace RedTool
         {
             Environment.Exit(0);
         }
+
+
+
     }
 
 
