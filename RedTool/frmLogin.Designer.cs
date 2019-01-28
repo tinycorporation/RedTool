@@ -78,7 +78,7 @@
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(208, 22);
-            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Username";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
@@ -107,7 +107,7 @@
             this.txtPassword.Location = new System.Drawing.Point(81, 155);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(208, 22);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -130,7 +130,7 @@
             this.btnLogin.Location = new System.Drawing.Point(43, 233);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(246, 36);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Sign In";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -144,7 +144,7 @@
             this.btnRegister.Location = new System.Drawing.Point(43, 291);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(246, 36);
-            this.btnRegister.TabIndex = 10;
+            this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -157,7 +157,7 @@
             this.chkRemember.Location = new System.Drawing.Point(43, 196);
             this.chkRemember.Name = "chkRemember";
             this.chkRemember.Size = new System.Drawing.Size(130, 18);
-            this.chkRemember.TabIndex = 11;
+            this.chkRemember.TabIndex = 3;
             this.chkRemember.Text = "Remember Password";
             this.chkRemember.UseVisualStyleBackColor = true;
             // 

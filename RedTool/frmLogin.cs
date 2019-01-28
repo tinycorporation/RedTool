@@ -189,6 +189,5 @@ namespace RedTool
             panel1.ForeColor = Color.WhiteSmoke;
             txtUsername.ForeColor = Color.WhiteSmoke;
         }
-        
-    }
+}
 }

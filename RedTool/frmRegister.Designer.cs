@@ -67,7 +67,7 @@
             this.txtPassword.Location = new System.Drawing.Point(81, 172);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(208, 22);
-            this.txtPassword.TabIndex = 18;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -90,7 +90,7 @@
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(208, 22);
-            this.txtUsername.TabIndex = 15;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Username";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
@@ -128,7 +128,7 @@
             this.txtEmail.Location = new System.Drawing.Point(81, 222);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(208, 22);
-            this.txtEmail.TabIndex = 21;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.Text = "Email";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
@@ -180,7 +180,7 @@
             this.btnRegister.Location = new System.Drawing.Point(43, 278);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(246, 36);
-            this.btnRegister.TabIndex = 24;
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -194,7 +194,7 @@
             this.btnLogin.Location = new System.Drawing.Point(43, 331);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(246, 36);
-            this.btnLogin.TabIndex = 20;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Sign In";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnRegister2_Click);

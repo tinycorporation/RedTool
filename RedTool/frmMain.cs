@@ -89,5 +89,21 @@ namespace RedTool
                 Settings1 = false;
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            var FormLogin = new frmLogin();
+            Hide();
+            FormLogin.Closed += (s, args) => Close();
+            FormLogin.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            var FormLogin = new frmLogin();
+            Hide();
+            FormLogin.Closed += (s, args) => Close();
+            FormLogin.Show();
+        }
     }
 }
