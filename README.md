@@ -15,4 +15,4 @@ This project is written in:
 A C# login form and HTML website with username, password and email. All user data is stored in the database.<br>
 The PHP has a user-friendly scripts to rebuild the tables and database when creating a new user.<br>
 
-<br><br><br><br><footer>Made by TinyCorp</footer>
+<br><br><br><br>Made by TinyCorp
