@@ -21,7 +21,7 @@ namespace RedTool
             Hidden = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void picHidden_Click(object sender, EventArgs e)
         {
             timer1.Start();
         }
@@ -35,7 +35,7 @@ namespace RedTool
                     panel1.Width = PW;
                     timer1.Stop();
                     Hidden = false;
-                    pictureBox1.Image = Properties.Resources.hide;
+                    picHidden.Image = Properties.Resources.hide;
                     this.Refresh();
                 }
             } else{
@@ -45,14 +45,14 @@ namespace RedTool
                     panel1.Width = 32;
                     timer1.Stop();
                     Hidden = true;
-                    pictureBox1.Image = Properties.Resources.view;
+                    picHidden.Image = Properties.Resources.view;
                     this.Refresh();
 
                 }
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void picExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
@@ -62,7 +62,8 @@ namespace RedTool
             MessageBox.Show("Credits", "Title", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         bool Settings1 = false;
-        private void label1_Click(object sender, EventArgs e)
+
+        private void lblSettings_Click(object sender, EventArgs e)
         {
             if(Settings1 == false)
             {
@@ -76,7 +77,7 @@ namespace RedTool
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void picSettings_Click(object sender, EventArgs e)
         {
             if (Settings1 == false)
             {
@@ -90,7 +91,7 @@ namespace RedTool
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void picLogOut_Click(object sender, EventArgs e)
         {
             var FormLogin = new frmLogin();
             Hide();
@@ -98,7 +99,7 @@ namespace RedTool
             FormLogin.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblLogOut_Click(object sender, EventArgs e)
         {
             var FormLogin = new frmLogin();
             Hide();

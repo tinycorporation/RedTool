@@ -52,63 +52,7 @@ namespace RedTool
 
             /* Login Button */
 
-            Settings.Username = txtUsername.Text;
-            Settings.Password = txtPassword.Text;
-
-            if (string.IsNullOrEmpty(Settings.Username)) return;
-            if (string.IsNullOrEmpty(Settings.Password)) return;
-
-
-            var temp = Extensions.Authentication.Login(
-                Settings.Username,
-                Settings.Password);
-
-            dynamic Results = JsonConvert.DeserializeObject(temp);
-
-            Settings.Username = Results.Username.ToString();
-
-            switch (bool.Parse(Results.Authenticated.ToString()))
-            {
-                case true:
-
-
-
-                    if (chkRemember.Checked == true)
-                    {
-                        var StreamWriter = new System.IO.StreamWriter(System.IO.Path.Combine(
-                        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "RedTool\\Credentials")
-                    );
-                        StreamWriter.WriteLine(Extensions.Other.Base64Encode(Settings.Username));
-                        StreamWriter.WriteLine(Extensions.Other.Base64Encode(Settings.Password));
-                        StreamWriter.Close();
-                    }
-
-
-
-
-                    MessageBox.Show(Results.Description.ToString());
-
-                    var Form2 = new frmMain();
-                    Hide();
-                    Form2.Closed += (s, args) => Close();
-                    Form2.Show();
-
-
-                    // System.Diagnostics.Process.Start("http://192.168.1.106/webmail");
-
-
-                    break;
-
-                case false:
-                    MessageBox.Show(Results.Description.ToString());
-
-                    break;
-
-                default:
-                    MessageBox.Show("connection error");
-
-                    break;
-            }
+            LoginMethod();
 
         }
 
@@ -189,5 +133,82 @@ namespace RedTool
             panel1.ForeColor = Color.WhiteSmoke;
             txtUsername.ForeColor = Color.WhiteSmoke;
         }
-}
+
+        public void LoginMethod()
+        {
+            Settings.Username = txtUsername.Text;
+            Settings.Password = txtPassword.Text;
+
+            if (string.IsNullOrEmpty(Settings.Username)) return;
+            if (string.IsNullOrEmpty(Settings.Password)) return;
+
+
+            var temp = Extensions.Authentication.Login(
+                Settings.Username,
+                Settings.Password);
+
+            dynamic Results = JsonConvert.DeserializeObject(temp);
+
+            Settings.Username = Results.Username.ToString();
+
+            switch (bool.Parse(Results.Authenticated.ToString()))
+            {
+                case true:
+
+
+
+                    if (chkRemember.Checked == true)
+                    {
+                        var StreamWriter = new System.IO.StreamWriter(System.IO.Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "RedTool\\Credentials")
+                    );
+                        StreamWriter.WriteLine(Extensions.Other.Base64Encode(Settings.Username));
+                        StreamWriter.WriteLine(Extensions.Other.Base64Encode(Settings.Password));
+                        StreamWriter.Close();
+                    }
+
+
+
+
+                    MessageBox.Show(Results.Description.ToString());
+
+                    var Form2 = new frmMain();
+                    Hide();
+                    Form2.Closed += (s, args) => Close();
+                    Form2.Show();
+
+
+                    // System.Diagnostics.Process.Start("http://192.168.1.106/webmail");
+
+
+                    break;
+
+                case false:
+                    MessageBox.Show(Results.Description.ToString());
+
+                    break;
+
+                default:
+                    MessageBox.Show("connection error");
+
+                    break;
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                LoginMethod();
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                LoginMethod();
+            }
+        }
+    }
 }

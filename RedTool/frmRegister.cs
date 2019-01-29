@@ -18,11 +18,8 @@ namespace RedTool
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        public void RegisterMethod()
         {
-
-            /* Register Button */
-
             Settings.Username = txtUsername.Text;
             Settings.Password = txtPassword.Text;
             Settings.Email = txtEmail.Text;
@@ -66,6 +63,14 @@ namespace RedTool
                 MessageBox.Show("Try again in a moment.");
             }
             timer1.Start();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
+            /* Register Button */
+
+            RegisterMethod();
 
 
         }
@@ -183,8 +188,29 @@ namespace RedTool
             Environment.Exit(0);
         }
 
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                RegisterMethod();
+            }
+        }
 
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                RegisterMethod();
+            }
+        }
 
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                RegisterMethod();
+            }
+        }
     }
 
 
