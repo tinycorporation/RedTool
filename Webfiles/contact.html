@@ -8,6 +8,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../files/css/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <style>
 body, html {height: 100%}
@@ -30,6 +33,7 @@ input[type=text], select {
   border: 1px solid #4B0082;
   border-radius: 4px;
   box-sizing: border-box;
+  color:black;
 }
 
 input[type=email], select {
@@ -40,16 +44,18 @@ input[type=email], select {
   border: 1px solid #4B0082;
   border-radius: 4px;
   box-sizing: border-box;
+  color:black;
 }
 
-input[type=Password], select {
+input[type=message], select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 100px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #4B0082;
   border-radius: 4px;
   box-sizing: border-box;
+  color:black;
 }
 
 button {
@@ -107,32 +113,48 @@ button:hover {
   color: #fff!important;
   background-color: #4B0082!important;
 }
-
+.navbar {
+        margin-bottom:0;
+}
 </style>
 
 <!-- Site code -->
 
 <body>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">RedTool</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="contact.html">Contact us</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/registration/register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-middle">
 
     <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
-    <form method="post" action="register.php" >
-      <label for="Username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="Username" required>
+    <form method="post" action="connection.php" >
+      <label for="Name"><b>Name</b></label>
+      <input type="text" placeholder="Full name" name="Name" required>
 
       <label for="Email"><b>Email</b></label>
-      <input type="email" placeholder="Enter Email" name="Email" required>
+      <input type="email" placeholder="Enter your Email" name="Email" required>
 
-      <label for="Password"><b>Password</b></label>
-      <input id="password" name="Password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : '');
-      if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
+      <label for="Subject"><b>Subject</b></label>
+      <input type="text" placeholder="What is the subject?" name="subject" required>
 
-      <label for="Password"><b>Verify Password</b></label>
-      <input id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" 
-      placeholder="Verify Password" required>
+      <label for="Message"><b>Message</b></label>
+      <input type="message" placeholder="Description about your problem" name="message" required>
 
       <button name ="register" Value="Register">Submit</button>
   
