@@ -47,16 +47,14 @@ input[type=email], select {
   color:black;
 }
 
-input[type=message], select {
-  width: 100%;
-  padding: 100px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #4B0082;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color:black;
-  height:200px;
+textarea {
+    width: 100%;
+    display: inline-block;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
 button {
@@ -128,9 +126,8 @@ button:hover {
       <a class="navbar-brand" href="#">RedTool</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/index.html">Home</a></li>
       <li class="active"><a href="contact.html">Contact us</a></li>
-      <li><a href="#"></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/registration/register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -155,10 +152,10 @@ button:hover {
       <input type="text" placeholder="What is the subject?" name="subject" required>
 
       <label for="Message"><b>Message</b></label>
-      <input type="message" placeholder="Description about your problem" name="message" required>
+      <textarea rows="4" cols="50" maxlength="400" name="message" placeholder="Description of your problem"></textarea>
 
       <button name ="register" Value="Register">Submit</button>
-
+    
       </form>
     </div>
 
