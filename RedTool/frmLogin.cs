@@ -172,7 +172,7 @@ namespace RedTool
 
                     MessageBox.Show(Results.Description.ToString());
 
-                    var Form2 = new frmMain();
+                    var Form2 = new frmSelector();
                     Hide();
                     Form2.Closed += (s, args) => Close();
                     Form2.Show();

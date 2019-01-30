@@ -12,6 +12,8 @@ namespace RedTool
         public static string Password { get; set; }
         public static string Email { get; set; }
 
+        public static int Devstatus { get; set; }
+
         public static string License { get; set; }
 
         public static string Useragent_string = "RedTool";
