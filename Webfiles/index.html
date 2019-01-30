@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
 <style>
     body, html {
         height: 100%
@@ -75,5 +77,19 @@
             Copyright © 2019 RedTool made by TinyCorp
         </div>
     </div>
+    <script>
+            window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+              "palette": {
+                "popup": {
+                  "background": "#ffffff"
+                },
+                "button": {
+                  "background": "#4b0082"
+                }
+              },
+              "theme": "classic"
+            })});
+    </script>
 </body>
 </html>
