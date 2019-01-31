@@ -9,7 +9,7 @@ $HWID     = $_POST['HWID'];
 # Static variables
 
 $Inifile = $_SERVER['DOCUMENT_ROOT'];
-$Inifile .= "/files/Settings.ini";
+$Inifile .= "Settings.ini";
 $Settings = parse_ini_file($Inifile, true);
 
 $Serverhostname = $Settings['Database']['Hostname'];

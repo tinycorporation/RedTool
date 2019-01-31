@@ -7,12 +7,12 @@
 <!-- Style -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../files/css/w3.css">
+<link rel="stylesheet" href="/css/w3.css">
 
 <style>
 body, html {height: 100%}
 .bgimg {
-    background-image: url('../files/images/Background.jpg');
+    background-image: url('/img/Background.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -165,7 +165,7 @@ button:hover {
                 # Static variables
 
                 $Inifile = $_SERVER['DOCUMENT_ROOT'];
-                $Inifile .= "/files/Settings.ini";
+                $Inifile .= "Settings.ini";
                 $Settings = parse_ini_file($Inifile, true);
 
                 $Serverhostname = $Settings['Database']['Hostname'];
@@ -263,7 +263,7 @@ button:hover {
     </div>
 
     <div class="w3-display-bottommiddle w3-padding-large">
-      Copyright © 2018 RedTool
+    Copyright © 2019 RedTool made by TinyCorp
     </div>
 </body>
 </html>

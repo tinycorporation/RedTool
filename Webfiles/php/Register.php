@@ -1,12 +1,15 @@
 <?php
+
+# Get variables from post method
+
 $Username = $_POST['Username'];
-$Email    = $_POST['Email'];
 $Password = $_POST['Password'];
+$Email    = $_POST['Email'];
 
 # Static variables
 
 $Inifile = $_SERVER['DOCUMENT_ROOT'];
-$Inifile .= "/files/Settings.ini";
+$Inifile .= "Settings.ini";
 $Settings = parse_ini_file($Inifile, true);
 
 $Serverhostname = $Settings['Database']['Hostname'];
@@ -18,6 +21,8 @@ $Adminuser = $Settings['Admin']['Username'];
 $Adminpass = $Settings['Admin']['Password'];
 
 $Usertable = $Settings['Tables']['Usertable'];
+$Codetable = $Settings['Tables']['Codetable'];
+$Emailtable = $Settings['Tables']['Emailtable'];
 
 # Connect to Server
 
@@ -41,6 +46,7 @@ Username VARCHAR(255) NOT NULL,
 Password VARCHAR(255) NOT NULL,
 Betastatus VARCHAR(1) NOT NULL,
 Email VARCHAR(255) NOT NULL,
+Verified VARCHAR(1) NULL, 
 Expires VARCHAR(255),
 Updated TIMESTAMP
 )";
@@ -50,24 +56,15 @@ $conn->query($sql);
 # Calculate results
 
 if ($conn->query("SELECT * FROM ${Usertable} WHERE Username = '${Username}'")->num_rows >= 1) {
-    echo "<script>
-		alert('Sorry account ${Username} already exists.');
-		window.history.go(-1);
-	 </script>";
+    echo "{'Username':'${Username}','Authenticated':'false','Description':'Sorry account ${Username} already exists.'}";
 }
 elseif ($conn->query("SELECT * FROM ${Usertable} WHERE Email = '${Email}'")->num_rows >= 1) {
-        echo "<script>
-		alert('Sorry Email: ${Email} is alreay registered.');
-		window.history.go(-1);
-	 </script>";
+    echo "{'Email':'${Email}','Authenticated':'false','Description':'Sorry account with Email: ${Email} already exists.'}";
 }
 else {
-    $conn->query("INSERT INTO ${Usertable} (Username, Password, Email, Betastatus, Expires) VALUES ('${Username}', '${Password}', '${Email}', '0', '0') ");
-  
-    echo "<script>
-		alert('You are registered. Your Username is: ${Username}.');
-		window.history.go(-2);
-	 </script>";
+    $conn->query("INSERT INTO ${Usertable} (Username, Password, Email, Verified, Betastatus, Expires) VALUES ('${Username}', '${Password}', '${Email}', '0', '0', '0') ");
+    
+    echo "{'Username':'${Username}','Authenticated':'true','Description':'Account ${Username} successfully created.'}";
 }
 
 # Close our connection
@@ -75,4 +72,3 @@ else {
 $conn->close();
 
 ?>
-
