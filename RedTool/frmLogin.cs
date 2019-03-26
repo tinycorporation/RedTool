@@ -19,7 +19,7 @@ namespace RedTool
         }
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            try //test.
+            try
             {
                 if (!System.IO.Directory.Exists(System.IO.Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "RedTool")))
