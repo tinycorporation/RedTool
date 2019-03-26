@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>Registration</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<script type="text/javascript" src="js/main.js"></script>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">RedTool</a>
+        </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/contact/contact.html">Contact us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/pages/registration/register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+      </div>
+    </nav>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+  <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+    <form method="post" action="/php/webregister.php">
+      <label for="Username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="Username" required>
+      <label for="Email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="Email" required>
+      <label for="Password"><b>Password</b></label>
+        <input id="password" name="Password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
+      <label for="Password"><b>Verify Password</b></label>
+        <input id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>
+      <button name ="register" Value="Register">Submit</button>
+    </form>
+  </div>
+  <div class="w3-display-bottommiddle w3-padding-large">
+      Copyright © 2019 RedTool made by TinyCorp
+  </div>
+</div>
+</body>
+</html>
