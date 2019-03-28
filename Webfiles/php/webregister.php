@@ -6,13 +6,14 @@ $Password = $_POST['Password'];
 # Static variables
 
 $Inifile = $_SERVER['DOCUMENT_ROOT'];
-$Inifile .= "Settings.ini";
+$Inifile .= "/php/Settings.ini";
 $Settings = parse_ini_file($Inifile, true);
 
 $Serverhostname = $Settings['Database']['Hostname'];
+$Databasename   = $Settings['Database']['Database'];
 $Databaseuser   = $Settings['Database']['Username'];
 $Databasepass   = $Settings['Database']['Password'];
-$Databasename   = $Settings['Database']['Database'];
+
 
 $Adminuser = $Settings['Admin']['Username'];
 $Adminpass = $Settings['Admin']['Password'];
