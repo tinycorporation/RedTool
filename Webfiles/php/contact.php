@@ -1,10 +1,6 @@
 <?php
 $Name = $_POST['Name'];
-<<<<<<< HEAD
-$Email    = $_POST['Email'];
-=======
 $Email = $_POST['Email'];
->>>>>>> 6d06678088a4733a80a5071c3f2adc383b7c7542
 $Subject = $_POST['Subject'];
 $Message = $_POST['Message'];
 
