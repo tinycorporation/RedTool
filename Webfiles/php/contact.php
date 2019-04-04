@@ -1,6 +1,10 @@
 <?php
 $Name = $_POST['Name'];
+<<<<<<< HEAD
 $Email    = $_POST['Email'];
+=======
+$Email = $_POST['Email'];
+>>>>>>> 6d06678088a4733a80a5071c3f2adc383b7c7542
 $Subject = $_POST['Subject'];
 $Message = $_POST['Message'];
 
@@ -38,6 +42,7 @@ id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 Name VARCHAR(255) NOT NULL,
 Email VARCHAR(255) NOT NULL,
 Subject VARCHAR(255) NOT NULL,
+<<<<<<< HEAD
 Message VARCHAR(400) NOT NULL,
 Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
@@ -49,5 +54,19 @@ $conn->query($sql);
 		alert('Thank you for contacting us, we will get back to you on ${Email} soon!');
 		window.history.go(-2);
 	 </script>";
+=======
+Message text,
+Created_on TIMESTAMP
+)";
+
+$conn->query($sql);
+
+$conn->query("INSERT INTO ${Contact} (Name, Email, Subject, Message) VALUES ('${Name}', '${Email}', '${Subject}', '${Message}') ");
+    echo "<script>
+		alert('Thank you for contacting us, we will get back to you on ${Email} soon!');
+		window.history.go(-2);
+     </script>";
+
+>>>>>>> 6d06678088a4733a80a5071c3f2adc383b7c7542
 $conn->close();
 ?>
