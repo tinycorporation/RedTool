@@ -1,13 +1,6 @@
-ErrorDocument 404 http://localhost/error
-
 <filesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
  Order Allow,Deny
  Deny from all
 </filesMatch>
 
 SetEnvIfNoCase user-agent "RedTool" good_bot
-<FilesMatch "\.(dll)">
-  Order Deny,Allow
-  Deny from All
-  Allow from env=good_bot
-</FilesMatch>
