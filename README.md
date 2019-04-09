@@ -1,18 +1,50 @@
-# RedTool
-A simple login system. Made for school, exam work. It's a sample program, not for commercial use, just to show our progress.
+<p align="center">
+	<a href="">
+		<img src?"" >
+	</a>
+</p>
 
-This project is written in:
-<ul>
-  <li>C#</li>
-  <li>HTML</li>
-  <li>PHP</li>
-  <li>SQL</li> 
-  <li>Javascript</li>
-  <li><em>Coming soon: </em>Powershell</li>
-</ul>
+<h3 align="center">RedTool</h3>
 
-<h1>Features</h1>
-A C# login form and HTML website with username, password and email. All user data is stored in the database.<br>
-The PHP has user-friendly scripts to rebuild the tables and database when creating a new user.<br>
+<p align="center">
+  Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  <br>
+  <a href=""><strong></strong></a>
+  <br>
+  <br>
+  <a href=""></a>
+  ·
+  <a href=""></a>
+  ·
+  <a href=""></a>
+  ·
+  <a href=""></a>
+</p>
 
-<br><br><br><br>Made by TinyCorp
+## Table of contents
+
+- [About RedTool ](#about-redtool)
+- [Features](#features)
+- [Getting started](#getting-started)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Reporting Bugs and Security Issues](#reporting-bugs-and-secruity-issues)
+- [Developers](#creators)
+- [Copyright and License](#copyright-and-license)
+
+
+## About RedTool
+
+## Features
+
+## Getting Started
+
+## Roadmap
+
+## Contributing
+
+## Reporting Bugs and Security Issues
+
+## Developers
+
+## Copyright and License
