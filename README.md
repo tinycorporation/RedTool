@@ -59,7 +59,7 @@ Main program and C# Developer
 
 Main web Developer 
 
-**Markus**
+**Marcus**
 - <https://github.com/gerrard9099>
 
 ## Copyright and License
