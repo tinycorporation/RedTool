@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="http://192.168.1.106/">
-		<img src="https://github.com/tinycorporation/RedTool/blob/Unfinished/Webfiles/img/redtoollogo.PNG" >
+		<img src="https://github.com/tinycorporation/RedTool/blob/master/Webfiles/img/redtoollogo.PNG" >
 	</a>
 </p>
 
@@ -36,7 +36,7 @@
 ## About RedTool
 RedTool is a simple and modern looking login program made in C# that connects to our website and our SQL Database. 
 
-![Main Program](https://github.com/tinycorporation/RedTool/blob/Unfinished/Webfiles/img/redtoolmain.PNG)
+![Main Program](https://github.com/tinycorporation/RedTool/blob/master/Webfiles/img/redtoolmain.PNG)
 
 RedTool is developed and maintained by TinyCorp which is a group of four high school students studying IT. 
 
@@ -56,7 +56,7 @@ The RedTool program and it's connected components such as the web server and web
 To get started simply head over to the [release tab](https://github.com/tinycorporation/RedTool/releases) on our Github and you can download just the program alone or the source code from the master branch.
 Inside the source code ZIP file you will find two main folders. RedTool and Webfiles. Inside the Webfiles folder you will find the source code to our website, CSS and every page on the RedTool website. 
 
-![Main page](https://github.com/tinycorporation/RedTool/blob/Unfinished/Webfiles/img/nettsidemain.PNG) 
+![Main page](https://github.com/tinycorporation/RedTool/blob/master/Webfiles/img/nettsidemain.PNG) 
 
 You will also find the source code for our main program and visual studio files where you can edit the program, make suggestions or report bugs that you find. 
 
