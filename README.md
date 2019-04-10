@@ -75,7 +75,7 @@ Main program and C# Developer - **Rond**
 Main web Developer - **Marcus**
 - <https://github.com/gerrard9099>
 
-Powershell Devloper - **Martin**
+Powershell Developer - **Martin**
 
 Github page responsible - **Robert**
 
