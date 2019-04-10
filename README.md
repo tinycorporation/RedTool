@@ -36,7 +36,7 @@
 ## About RedTool
 RedTool is a simple and modern looking login program made in C# that connects to our website and our SQL Database. 
 
-![Main Program](https://github.com/tinycorporation/RedTool/tree/master/Webfiles/img/redtoolmain.PNG)
+![Main Program](https://github.com/tinycorporation/RedTool/blob/master/Webfiles/img/redtoolmain.PNG)
 
 RedTool is developed and maintained by TinyCorp which is a group of four high school students studying IT. 
 
