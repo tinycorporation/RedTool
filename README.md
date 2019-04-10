@@ -52,6 +52,8 @@ The RedTool program and it's connected components such as the web server and web
   <li>Javascript</li>
 </ul>	
 
+Current features are a C# login form and a HTML website with username, password and email login. All data is stored in an SQL databse and the PHP is user-friendly scripts to rebuild the tables and databse when creating a new user. 
+
 ## Getting Started
 To get started simply head over to the [release tab](https://github.com/tinycorporation/RedTool/releases) on our Github and you can download just the program alone or the source code from the master branch.
 Inside the source code ZIP file you will find two main folders. RedTool and Webfiles. Inside the Webfiles folder you will find the source code to our website, CSS and every page on the RedTool website. 
