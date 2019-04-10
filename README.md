@@ -1,6 +1,6 @@
 <p align="center">
-	<a href="">
-		<img src?"" >
+	<a href="http://192.168.1.106/">
+		<img src="https://github.com/tinycorporation/RedTool/blob/Unfinished/Webfiles/img/redtoollogo.PNG" >
 	</a>
 </p>
 
