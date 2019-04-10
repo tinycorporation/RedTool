@@ -68,10 +68,12 @@ Future Projects are that we would like to implement into our program and website
 </ul>
 
 ## Contributing
-If you want to contribute please read through our [contributing guidelines](https://github.com/tinycorporation/RedTool/blob/master/CONTRIBUTING.md)
+If you want to contribute to the program or website please read through our [contributing guidelines](https://github.com/tinycorporation/RedTool/blob/master/CONTRIBUTING.md)
 
 ## Reporting Bugs and Security Issues
+Any bugs you find can be reported and sent in on our [issue tab](https://github.com/tinycorporation/RedTool/issues)
 
+Any important secuirty issues can be reported directly to us on our email -tinycorp@haugikt.eu
 
 ## Developers
 Main program and C# Developer - **Rond**
