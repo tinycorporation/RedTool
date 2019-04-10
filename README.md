@@ -29,7 +29,7 @@
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [Reporting Bugs and Security Issues](#reporting-bugs-and-secruity-issues)
-- [Developers](#creators)
+- [Developers](#developers)
 - [Copyright and License](#copyright-and-license)
 
 
