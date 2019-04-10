@@ -59,7 +59,7 @@ Inside the source code ZIP file you will find two main folders. RedTool and Webf
 You will also find the source code for our main program and visual studio files where you can edit the program, make suggestions or report bugs that you find. 
 
 ## Roadmap
-Future Projects are that we would like to implement into our program and website are: 
+Current and Future Projects that we are currently working on and would like to implement into our program and website are: 
 <ul>
  <li>Powershell implementation</li>
   <li>Online Marketplace on RedTool website</li>
