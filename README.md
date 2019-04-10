@@ -24,7 +24,6 @@
 ## Table of contents
 
 - [About RedTool ](#about-redtool)
-RedTool is a simple and modern login system created by TinyCorp. 
 - [Features](#features)
 - [Getting started](#getting-started)
 - [Roadmap](#roadmap)
