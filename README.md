@@ -54,7 +54,7 @@ The RedTool program and it's connected components such as the web server and web
 
 
 ## Roadmap
-Future Projects are 
+Future Projects are that we would like to implement into our program and website are: 
 <ul>
  <li>Powershell implementation</li>
   <li>Online Marketplace on RedTool website</li>
