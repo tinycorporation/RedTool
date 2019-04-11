@@ -40,7 +40,7 @@ RedTool is a simple and modern looking login software made in C# that connects t
 
 RedTool is developed and maintained by TinyCorp which is a group of four high school students studying IT. 
 
-Disclaimer: RedTool is a program made for exam and school work and is not for commerical use. Just a sample program to show progress.
+Disclaimer: RedTool is a sofware made for exam and school work and is not for commerical use. Just a sample program to show progress.
 
 ## Features
 The RedTool software and it's connected components such as the web server and website is written in a variety of languages such as 
