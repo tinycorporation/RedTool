@@ -38,7 +38,7 @@
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(774, 561);
+            this.webBrowser1.Size = new System.Drawing.Size(1184, 661);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("http://192.168.1.106/pages/admin", System.UriKind.Absolute);
             // 
@@ -46,8 +46,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(774, 561);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.webBrowser1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAdmin";
