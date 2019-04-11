@@ -68,7 +68,7 @@ namespace RedTool
 
         private void lblCredits_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Credits", "Title", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("https://www.flaticon.com for icons used.", "Credits", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         bool Settings1 = false;
 
