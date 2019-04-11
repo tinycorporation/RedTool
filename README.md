@@ -7,7 +7,7 @@
 <h3 align="center">RedTool</h3>
 
 <p align="center">
- A modern and simple login system created with C# and JavaScript.
+ A modern and simple login system created with C#, SQL, PHP and JavaScript.
   <br>
   <a href=""><strong></strong></a>
   <br>
@@ -34,7 +34,7 @@
 
 
 ## About RedTool
-RedTool is a simple and modern looking login program made in C# that connects to our website and our SQL Database. 
+RedTool is a simple and modern looking login software made in C# that connects to our website and our SQL Database. 
 
 ![Main Program](https://github.com/tinycorporation/RedTool/blob/master/Webfiles/img/redtoolmain.PNG)
 
@@ -43,7 +43,7 @@ RedTool is developed and maintained by TinyCorp which is a group of four high sc
 Disclaimer: RedTool is a program made for exam and school work and is not for commerical use. Just a sample program to show progress.
 
 ## Features
-The RedTool program and it's connected components such as the web server and website is written in a variety of languages such as 
+The RedTool software and it's connected components such as the web server and website is written in a variety of languages such as 
 <ul>
   <li>C#</li>
   <li>HTML</li>
