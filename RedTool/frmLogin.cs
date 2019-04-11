@@ -49,9 +49,7 @@ namespace RedTool
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            /* Login Button */
-
+            
             LoginMethod();
 
         }
