@@ -1,128 +1,30 @@
 <!DOCTYPE html>
 <html>
-<title>RedTool</title>
+<title>Admin Panel</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Style -->
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/css/style.css">
-
-<style>
-body, html {height: 100%}
-.bgimg {
-    background-image: url('/img/Background.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-form {
-    border: 0px
-}
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #4B0082;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=Password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #4B0082;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-button {
-  width: 100%;
-  background-color: #4B0082;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.purple_neat {
-  color: #fff!important;
-  background-color: #4B0082!important;
-}
-
-</style>
-
-<!-- Site code -->
+<script type="text/javascript" src="/js/main.js"></script>
 
 <body>
-
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-middle">
 
     <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
     <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
-      <label for="Username"><b>Username</b></label>
+      <label for="Username"><b>Administrator Username</b></label>
       <input type="text" id="UsernameBox" placeholder="Enter Username" name="Username" required>
 
       <label for="Password"><b>Password</b></label>
       <input type="Password" id="PasswordBox" placeholder="Enter Password" name="Password" required>
-
-      <label for="Amount">Amount</label>
-      <select id="AmountBox" name="Amount">
-        <option value=1>1 Key(s)</option>
-        <option value=5>5 Key(s)</option>
-        <option value=10>10 Key(s)</option>
-        <option value=50>50 Key(s)</option>
-      </select>
+<break></break>
+      <label for="Username"><b>Username</b></label>
+      <input type="text" id="UsernameBox1" placeholder="Enter Username" name="Username1" required>
 
       <label for="Expires">Expires</label>
       <select id="TimeBox" name="Expires">
@@ -132,13 +34,13 @@ button:hover {
         <option value=25000000>Lifetime</option>
       </select>
 
-      <label for="Beta">Beta Access</label>
-      <select id="BetaBox" name="Beta">
+      <label for="Admin">Administrator</label>
+      <select id="AdminBox" name="Admin">
         <option value=0>False</option>
         <option value=1>True</option>
       </select>
 
-      <button id="SubmitButton" onclick="">Submit</button>
+      <button id="SubmitButton" onclick="" value="Submit">Submit</button>
 
       <div id="id01" class="modal">
 
@@ -146,96 +48,101 @@ button:hover {
           <header class="w3-container w3-display-topcenter purple_neat">
             <span onclick="document.getElementById('id01').style.display='none'"
               class="w3-button w3-display-topright">&times;</span>
-              <h2>License key generator</h2>
+              <h2>Messagebox</h2>
             </header>
             <div class="w3-container">
 
               <span style="color:black;">
+<?php
 
-                <?php
+# Get variables from post method
 
-                # Get variables from post method
+$Username = $_POST['Username'];
+$Password = $_POST['Password'];
+$Username1 = $_POST['Username1'];
+$Expires = $_POST['Expires'];
+$Administrator = $_POST['Administrator'];
 
-                $Username   = $_POST['Username'];
-                $Password   = $_POST['Password'];
-                $Amount     = $_POST['Amount'];
-                $Expires    = $_POST['Expires'];
-                $Betastatus = $_POST['Beta'];
+# Static variables
 
-                # Static variables
+$Inifile = $_SERVER['DOCUMENT_ROOT'];
+$Inifile .= "/php/Settings.ini";
+$Settings = parse_ini_file($Inifile, true);
 
-                $Inifile = $_SERVER['DOCUMENT_ROOT'];
-                $Inifile .= "Settings.ini";
-                $Settings = parse_ini_file($Inifile, true);
+$Serverhostname = $Settings['Database']['Hostname'];
+$Databaseuser   = $Settings['Database']['Username'];
+$Databasepass   = $Settings['Database']['Password'];
+$Databasename   = $Settings['Database']['Database'];
 
-                $Serverhostname = $Settings['Database']['Hostname'];
-                $Databaseuser   = $Settings['Database']['Username'];
-                $Databasepass   = $Settings['Database']['Password'];
-                $Databasename   = $Settings['Database']['Database'];
+$Adminuser = $Settings['Admin']['Username'];
+$Adminpass = $Settings['Admin']['Password'];
 
-                $Adminuser = $Settings['Admin']['Username'];
-                $Adminpass = $Settings['Admin']['Password'];
+$Usertable = $Settings['Tables']['Usertable'];
+$Codetable = $Settings['Tables']['Codetable'];
 
-                $Usertable = $Settings['Tables']['Usertable'];
-                $Codetable = $Settings['Tables']['Codetable'];
+# Connect to Server
 
-                $Stableurl = $Settings['Loader']['Stableurl'];
-                $Betaurl   = $Settings['Loader']['Betaurl'];
-                $DecryptionKey = $Settings['Loader']['DecryptionKey'];
+$conn = new mysqli($Serverhostname, $Databaseuser, $Databasepass);
 
-                function RandString($length = 30) {
-                    $characters       = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-                    $charactersLength = strlen($characters);
-                    $randomString     = '';
-                    for ($i = 0; $i < $length; $i++) {
-                        $randomString .= $characters[rand(0, $charactersLength - 1)];
-                    }
-                    return $randomString;
-                }
+# Check if Database exists if not create it
 
-                # Connect to Server
+$conn->query("CREATE DATABASE IF NOT EXISTS ${Databasename}");
 
-                $conn = new mysqli($Serverhostname, $Databaseuser, $Databasepass);
+# Check if Table exists if not create it
 
-                # Check if Database exists if not create it
+$conn = new mysqli($Serverhostname, $Databaseuser, $Databasepass, $Databasename);
 
-                $conn->query("CREATE DATABASE IF NOT EXISTS ${Databasename}");
+$sql = "CREATE TABLE IF NOT EXISTS ${Usertable} (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Username VARCHAR(255) NOT NULL,
+Password VARCHAR(255) NOT NULL,
+Administrator VARCHAR(1) NOT NULL,
+Expires VARCHAR(255),
+Updated TIMESTAMP
+)";
 
-                # Check if Table exists if not create it
+$conn->query($sql);
 
-                $conn = new mysqli($Serverhostname, $Databaseuser, $Databasepass, $Databasename);
+# Calculate results
 
-                $sql = "CREATE TABLE IF NOT EXISTS ${Codetable} (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                License VARCHAR(255) NOT NULL,
-                Betastatus VARCHAR(1) NOT NULL,
-                Expires VARCHAR(255) NOT NULL
-                )";
+$sql = "SELECT * FROM ${Usertable} WHERE Username = '${Username}' and Password = '${Password}'";
 
-                $conn->query($sql);
+if ($conn->query($sql)->num_rows === 1) {
 
-                # Calculate results
+    $Administrator = $conn->query($sql)->fetch_object()->Administrator;
 
-                if ($Username === $Adminuser) {
-                  if ($Password === $Adminpass) {
-                    for ($i = 0; $i < $Amount; $i++) {
+    if ($conn->query("SELECT * FROM ${Usertable} WHERE Username = '${Username}' and Password = '${Password}'")->num_rows === 1) {
+        $Timeleft = $conn->query($sql)->fetch_object()->Expires;
+        $Administrator = $conn->query($sql)->fetch_object()->Administrator;
 
-                      $License = RandString();
+        if ($Timeleft > 0) {
+          if ($Timeleft >= 25000000) {
+              echo "{'Username':'${Username}','Expires':'Never','Authenticated':'true','Administrator':'${Administrator}','Description':'Welcome ${Username} you have successfully logged in.'}";
+          }
+          else {
+              echo "{'Username':'${Username}','Expires':'${Timeleft}','Authenticated':'true','Administrator':'${Administrator}','Description':'Welcome ${Username} you have successfully logged in.'}";
+          }
+        }
+        else {
+          echo "{'Username':'${Username}','Expires':'${Timeleft}','Authenticated':'false','Description':'Sorry ${Username} your subscription has expired.'}";
+        }
 
-                      $conn->query("INSERT INTO ${Codetable} (`License`, `Betastatus`, `Expires`) VALUES ('{$License}', '${Betastatus}','${Expires}')");
+        die();
+    }
+}
 
-                      echo "<p>${License}</p>";
-                    }
-                  }
-                  else {
-                    echo "<p>NULL CREDENTIALS</p>";
-                  }
-                }
-                else {
-                  echo "<p>NULL CREDENTIALS</p>";
-                }
+if ($conn->query($sql)->num_rows >= 1) {
+  echo "{'Username':'${Username}','Expires':'0','Authenticated':'false','Description':'Sorry ${Username} an unknown error has occured.'}";
+}
+else {
+  echo "{'Username':'${Username}','Expires':'0','Authenticated':'false','Description':'Sorry ${Username} an account with these details does not exist.'}";
+}
 
-                ?>
+# Close our connection
+
+$conn->close();
+
+?>
 
               </span>
             </div>
@@ -248,7 +155,7 @@ button:hover {
         if(isset($_POST['Password'])) {
           if(isset($_POST['Amount'])) {
             if(isset($_POST['Expires'])) {
-              if(isset($_POST['Beta'])) {
+              if(isset($_POST['Admin'])) {
 
                 echo "<script> document.getElementById('id01').style.display='block' </script>";
               }

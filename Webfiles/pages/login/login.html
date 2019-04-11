@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Registration</title>
+<title>Login</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -27,16 +27,13 @@
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-middle">
   <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
-    <form method="post" action="/php/webregister.php">
+    <h1 class="w3-jumbo w3-center w3-animate-top"><span class="redtool">Red</span>Tool</h1>
+    <form method="post" action="/php/weblogin.php">
       <label for="Username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="Username" required>
-      <label for="Email"><b>Email</b></label>
-        <input type="email" placeholder="Enter Email" name="Email" required>
       <label for="Password"><b>Password</b></label>
-        <input id="password" name="Password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
-      <label for="Password"><b>Verify Password</b></label>
-        <input id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>
-      <button name ="register" Value="Register">Submit</button>
+        <input id="password" name="Password" type="password" pattern="^\S{6,}$" placeholder="Password" required>
+      <button name ="Login" Value="Login">Login</button>
     </form>
   </div>
   <div class="w3-display-bottommiddle w3-padding-large">
