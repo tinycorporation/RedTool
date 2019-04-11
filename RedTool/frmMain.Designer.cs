@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblAdmin = new System.Windows.Forms.Label();
             this.lblLogOut = new System.Windows.Forms.Label();
             this.picLogOut = new System.Windows.Forms.PictureBox();
             this.lblCredits = new System.Windows.Forms.Label();
@@ -42,11 +43,13 @@
             this.picSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
             this.picExit = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHidden)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
@@ -55,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.Controls.Add(this.lblAdmin);
             this.panel1.Controls.Add(this.lblLogOut);
             this.panel1.Controls.Add(this.picLogOut);
             this.panel1.Controls.Add(this.lblCredits);
@@ -64,6 +68,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 513);
             this.panel1.TabIndex = 0;
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Location = new System.Drawing.Point(122, 412);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(66, 13);
+            this.lblAdmin.TabIndex = 4;
+            this.lblAdmin.Text = "Admin Panel";
+            this.lblAdmin.Click += new System.EventHandler(this.LblAdmin_Click);
             // 
             // lblLogOut
             // 
@@ -134,7 +148,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Controls.Add(this.checkBox1);
             this.panel5.Location = new System.Drawing.Point(424, 38);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(113, 184);
@@ -143,7 +158,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.picSettings);
             this.panel3.Controls.Add(this.lblSettings);
             this.panel3.Controls.Add(this.picExit);
@@ -190,6 +205,17 @@
             this.picExit.TabStop = false;
             this.picExit.Click += new System.EventHandler(this.picExit_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(4, 164);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(79, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Dark Mode";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +234,8 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHidden)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
@@ -230,5 +258,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblLogOut;
         private System.Windows.Forms.PictureBox picLogOut;
+        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
