@@ -49,9 +49,7 @@ namespace RedTool
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            /* Login Button */
-
+            
             LoginMethod();
 
         }
@@ -150,6 +148,21 @@ namespace RedTool
             dynamic Results = JsonConvert.DeserializeObject(temp);
 
             Settings.Username = Results.Username.ToString();
+
+            switch (int.Parse(Results.Administrator.ToString()))
+            {
+                case 1:
+                    Settings.Admin = 1;
+
+                    break;
+
+                case 0:
+                    Settings.Admin = 0;
+
+                    break;
+            }
+
+
 
             switch (bool.Parse(Results.Authenticated.ToString()))
             {

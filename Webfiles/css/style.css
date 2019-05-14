@@ -1,12 +1,13 @@
 body, html {
+overflow:hidden;
     height: 100%
 }
 
 .bgimg {
-    background-image: url('/img/Background.jpg');
+    background-image: url('/img/background1.jpeg');
     min-height: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: stretch;
     margin-top:0;
 }
 
@@ -28,7 +29,7 @@ span.divider {
 }
 
 .navbar{
-    margin-bottom:0;
+    position:fixed;
 }
 
 p a{
@@ -222,7 +223,7 @@ position: relative;
 }
 
 .w3-tooltip, .w3-display-container {
-    position: relative
+    position: middle;
 }
 
 .w3-animate-input {
@@ -255,3 +256,12 @@ position: relative;
 .w3-display-position {
     position: absolute
 }
+.w3-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px
+}
+

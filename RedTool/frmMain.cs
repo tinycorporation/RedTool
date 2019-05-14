@@ -19,6 +19,15 @@ namespace RedTool
             InitializeComponent();
             PW = panel1.Width;
             Hidden = false;
+
+            if (Settings.Admin == 1)
+            {
+                lblAdmin.Visible = true;
+            }
+            else if (Settings.Admin == 0)
+            {
+                lblAdmin.Visible = false;
+            }
         }
 
         private void picHidden_Click(object sender, EventArgs e)
@@ -59,7 +68,7 @@ namespace RedTool
 
         private void lblCredits_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Credits", "Title", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("https://www.flaticon.com for icons used.", "Credits", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         bool Settings1 = false;
 
@@ -105,6 +114,29 @@ namespace RedTool
             Hide();
             FormLogin.Closed += (s, args) => Close();
             FormLogin.Show();
+        }
+
+        private void LblAdmin_Click(object sender, EventArgs e)
+        {
+            var FormAdmin = new frmAdmin();
+            Hide();
+            FormAdmin.Show();
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                panel3.BackColor = Color.FromArgb(45, 45, 45);
+                panel4.BackColor = Color.FromArgb(34, 34, 34);
+                panel5.BackColor = Color.FromArgb(40, 40, 40);
+            }
+            else
+            {
+                panel3.BackColor = Color.LightGray;
+                panel4.BackColor = Color.WhiteSmoke;
+                panel5.BackColor = Color.Gainsboro;
+            }
         }
     }
 }

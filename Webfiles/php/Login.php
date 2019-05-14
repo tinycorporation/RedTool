@@ -4,6 +4,7 @@
 
 $Username = $_POST['Username'];
 $Password = $_POST['Password'];
+$Administrator = $_POST['Administrator'];
 
 # Static variables
 
@@ -38,7 +39,7 @@ $sql = "CREATE TABLE IF NOT EXISTS ${Usertable} (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 Username VARCHAR(255) NOT NULL,
 Password VARCHAR(255) NOT NULL,
-Betastatus VARCHAR(1) NOT NULL,
+Administrator VARCHAR(1) NOT NULL,
 Expires VARCHAR(255),
 Updated TIMESTAMP
 )";
@@ -51,18 +52,18 @@ $sql = "SELECT * FROM ${Usertable} WHERE Username = '${Username}' and Password =
 
 if ($conn->query($sql)->num_rows === 1) {
 
-    $Betastatus = $conn->query($sql)->fetch_object()->Betastatus;
+    $Administrator = $conn->query($sql)->fetch_object()->Administrator;
 
     if ($conn->query("SELECT * FROM ${Usertable} WHERE Username = '${Username}' and Password = '${Password}'")->num_rows === 1) {
         $Timeleft = $conn->query($sql)->fetch_object()->Expires;
-        $Betastatus = $conn->query($sql)->fetch_object()->Betastatus;
+        $Administrator = $conn->query($sql)->fetch_object()->Administrator;
 
         if ($Timeleft > 0) {
           if ($Timeleft >= 25000000) {
-              echo "{'Username':'${Username}','Expires':'Never','Authenticated':'true','Betastatus':'${Betastatus}','Description':'Welcome ${Username} you have successfully logged in.'}";
+              echo "{'Username':'${Username}','Expires':'Never','Authenticated':'true','Administrator':'${Administrator}','Description':'Welcome ${Username} you have successfully logged in.'}";
           }
           else {
-              echo "{'Username':'${Username}','Expires':'${Timeleft}','Authenticated':'true','Betastatus':'${Betastatus}','Description':'Welcome ${Username} you have successfully logged in.'}";
+              echo "{'Username':'${Username}','Expires':'${Timeleft}','Authenticated':'true','Administrator':'${Administrator}','Description':'Welcome ${Username} you have successfully logged in.'}";
           }
         }
         else {

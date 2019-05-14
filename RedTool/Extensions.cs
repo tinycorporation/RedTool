@@ -27,7 +27,7 @@ namespace RedTool
                         ["Password"] = Password
                     };
 
-                    byte[] response = WebClient.UploadValues(Settings.Website + "loader/php/Login.php", data);
+                    byte[] response = WebClient.UploadValues(Settings.Website + "php/Login.php", data);
 
                     return Encoding.UTF8.GetString(response);
                 }
@@ -48,7 +48,7 @@ namespace RedTool
                         ["Email"] = Email
                     };
 
-                    byte[] Response = WebClient.UploadValues(Settings.Website + "loader/php/Register.php", data);
+                    byte[] Response = WebClient.UploadValues(Settings.Website + "php/Register.php", data);
 
                     return Encoding.UTF8.GetString(Response);
                 }
@@ -68,7 +68,7 @@ namespace RedTool
                         ["License"] = License
                     };
 
-                    byte[] Response = WebClient.UploadValues(Settings.Website + "loader/php/Activate.php", data);
+                    byte[] Response = WebClient.UploadValues(Settings.Website + "php/Activate.php", data);
 
                     return Encoding.UTF8.GetString(Response);
                 }
@@ -87,7 +87,7 @@ namespace RedTool
                         ["Message"] = Message
                     };
 
-                    byte[] Response = WebClient.UploadValues(Settings.Website + "loader/php/Alert.php", data);
+                    byte[] Response = WebClient.UploadValues(Settings.Website + "php/Alert.php", data);
 
                     return Encoding.UTF8.GetString(Response);
                 }
