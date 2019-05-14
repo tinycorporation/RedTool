@@ -154,6 +154,9 @@ button:hover {
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%)
 }
+.w3-display-top {
+position: relative;
+}
 
 .w3-display-middle-contact {
     position: absolute;
