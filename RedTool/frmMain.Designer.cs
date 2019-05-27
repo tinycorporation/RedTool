@@ -39,11 +39,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.picSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
             this.picExit = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,13 +67,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 513);
+            this.panel1.Size = new System.Drawing.Size(214, 649);
             this.panel1.TabIndex = 0;
             // 
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Location = new System.Drawing.Point(122, 412);
+            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.lblAdmin.Location = new System.Drawing.Point(122, 548);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(66, 13);
             this.lblAdmin.TabIndex = 4;
@@ -83,8 +85,8 @@
             // 
             this.lblLogOut.AutoSize = true;
             this.lblLogOut.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblLogOut.Location = new System.Drawing.Point(30, 488);
+            this.lblLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.lblLogOut.Location = new System.Drawing.Point(30, 624);
             this.lblLogOut.Name = "lblLogOut";
             this.lblLogOut.Size = new System.Drawing.Size(54, 16);
             this.lblLogOut.TabIndex = 3;
@@ -94,7 +96,7 @@
             // picLogOut
             // 
             this.picLogOut.Image = global::RedTool.Properties.Resources.logout;
-            this.picLogOut.Location = new System.Drawing.Point(3, 478);
+            this.picLogOut.Location = new System.Drawing.Point(3, 614);
             this.picLogOut.Name = "picLogOut";
             this.picLogOut.Size = new System.Drawing.Size(32, 32);
             this.picLogOut.TabIndex = 2;
@@ -104,7 +106,8 @@
             // lblCredits
             // 
             this.lblCredits.AutoSize = true;
-            this.lblCredits.Location = new System.Drawing.Point(169, 491);
+            this.lblCredits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.lblCredits.Location = new System.Drawing.Point(169, 627);
             this.lblCredits.Name = "lblCredits";
             this.lblCredits.Size = new System.Drawing.Size(39, 13);
             this.lblCredits.TabIndex = 1;
@@ -139,11 +142,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.webBrowser1);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(214, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(560, 513);
+            this.panel4.Size = new System.Drawing.Size(926, 649);
             this.panel4.TabIndex = 2;
             // 
             // panel5
@@ -156,55 +160,6 @@
             this.panel5.TabIndex = 0;
             this.panel5.Visible = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.picSettings);
-            this.panel3.Controls.Add(this.lblSettings);
-            this.panel3.Controls.Add(this.picExit);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(214, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(560, 32);
-            this.panel3.TabIndex = 3;
-            // 
-            // picSettings
-            // 
-            this.picSettings.BackgroundImage = global::RedTool.Properties.Resources.VisualEditor___Icon___Advanced_svg;
-            this.picSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSettings.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picSettings.Image = global::RedTool.Properties.Resources.VisualEditor___Icon___Advanced_svg;
-            this.picSettings.Location = new System.Drawing.Point(424, 0);
-            this.picSettings.Name = "picSettings";
-            this.picSettings.Size = new System.Drawing.Size(32, 32);
-            this.picSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picSettings.TabIndex = 1;
-            this.picSettings.TabStop = false;
-            this.picSettings.Click += new System.EventHandler(this.picSettings_Click);
-            // 
-            // lblSettings
-            // 
-            this.lblSettings.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblSettings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSettings.Location = new System.Drawing.Point(456, 0);
-            this.lblSettings.Name = "lblSettings";
-            this.lblSettings.Size = new System.Drawing.Size(72, 32);
-            this.lblSettings.TabIndex = 2;
-            this.lblSettings.Text = "Settings";
-            this.lblSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSettings.Click += new System.EventHandler(this.lblSettings_Click);
-            // 
-            // picExit
-            // 
-            this.picExit.BackgroundImage = global::RedTool.Properties.Resources.error;
-            this.picExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picExit.Location = new System.Drawing.Point(528, 0);
-            this.picExit.Name = "picExit";
-            this.picExit.Size = new System.Drawing.Size(32, 32);
-            this.picExit.TabIndex = 0;
-            this.picExit.TabStop = false;
-            this.picExit.Click += new System.EventHandler(this.picExit_Click);
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -216,11 +171,70 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.picSettings);
+            this.panel3.Controls.Add(this.lblSettings);
+            this.panel3.Controls.Add(this.picExit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(214, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(926, 32);
+            this.panel3.TabIndex = 3;
+            // 
+            // picSettings
+            // 
+            this.picSettings.BackgroundImage = global::RedTool.Properties.Resources.settings_black;
+            this.picSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picSettings.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picSettings.Image = global::RedTool.Properties.Resources.settings_black;
+            this.picSettings.Location = new System.Drawing.Point(790, 0);
+            this.picSettings.Name = "picSettings";
+            this.picSettings.Size = new System.Drawing.Size(32, 32);
+            this.picSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picSettings.TabIndex = 1;
+            this.picSettings.TabStop = false;
+            this.picSettings.Click += new System.EventHandler(this.picSettings_Click);
+            // 
+            // lblSettings
+            // 
+            this.lblSettings.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblSettings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSettings.Location = new System.Drawing.Point(822, 0);
+            this.lblSettings.Name = "lblSettings";
+            this.lblSettings.Size = new System.Drawing.Size(72, 32);
+            this.lblSettings.TabIndex = 2;
+            this.lblSettings.Text = "Settings";
+            this.lblSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSettings.Click += new System.EventHandler(this.lblSettings_Click);
+            // 
+            // picExit
+            // 
+            this.picExit.BackgroundImage = global::RedTool.Properties.Resources.error;
+            this.picExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picExit.Location = new System.Drawing.Point(894, 0);
+            this.picExit.Name = "picExit";
+            this.picExit.Size = new System.Drawing.Size(32, 32);
+            this.picExit.TabIndex = 0;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.picExit_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(926, 649);
+            this.webBrowser1.TabIndex = 1;
+            this.webBrowser1.Url = new System.Uri("http://192.168.1.106/shop", System.UriKind.Absolute);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 513);
+            this.ClientSize = new System.Drawing.Size(1140, 649);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -260,5 +274,6 @@
         private System.Windows.Forms.PictureBox picLogOut;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

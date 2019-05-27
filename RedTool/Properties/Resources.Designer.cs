@@ -19,7 +19,7 @@ namespace RedTool.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -65,17 +65,7 @@ namespace RedTool.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cancel_music {
             get {
-                object obj = ResourceManager.GetObject("cancel-music", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cancel_music1 {
-            get {
-                object obj = ResourceManager.GetObject("cancel-music1", resourceCulture);
+                object obj = ResourceManager.GetObject("cancel_music", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,16 +83,6 @@ namespace RedTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eye__1_ {
-            get {
-                object obj = ResourceManager.GetObject("eye (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap hide {
             get {
                 object obj = ResourceManager.GetObject("hide", resourceCulture);
@@ -113,19 +93,9 @@ namespace RedTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hide_interface_symbol__1_ {
+        internal static System.Drawing.Bitmap key {
             get {
-                object obj = ResourceManager.GetObject("hide-interface-symbol (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap key__1_ {
-            get {
-                object obj = ResourceManager.GetObject("key (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("key", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +123,9 @@ namespace RedTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap man__1_ {
+        internal static System.Drawing.Bitmap man {
             get {
-                object obj = ResourceManager.GetObject("man (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("man", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,7 +135,27 @@ namespace RedTool.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap menu_button_of_three_horizontal_lines {
             get {
-                object obj = ResourceManager.GetObject("menu-button-of-three-horizontal-lines", resourceCulture);
+                object obj = ResourceManager.GetObject("menu_button_of_three_horizontal_lines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_black {
+            get {
+                object obj = ResourceManager.GetObject("settings_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_grey {
+            get {
+                object obj = ResourceManager.GetObject("settings_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,16 +166,6 @@ namespace RedTool.Properties {
         internal static System.Drawing.Bitmap view {
             get {
                 object obj = ResourceManager.GetObject("view", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap VisualEditor___Icon___Advanced_svg {
-            get {
-                object obj = ResourceManager.GetObject("VisualEditor_-_Icon_-_Advanced.svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

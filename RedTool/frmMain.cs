@@ -130,12 +130,18 @@ namespace RedTool
                 panel3.BackColor = Color.FromArgb(45, 45, 45);
                 panel4.BackColor = Color.FromArgb(34, 34, 34);
                 panel5.BackColor = Color.FromArgb(40, 40, 40);
+                checkBox1.ForeColor = Color.FromArgb(170, 170, 170);
+                lblSettings.ForeColor = Color.FromArgb(170, 170, 170);
+                picSettings.BackgroundImage = Properties.Resources.settings_grey;
             }
             else
             {
                 panel3.BackColor = Color.LightGray;
                 panel4.BackColor = Color.WhiteSmoke;
                 panel5.BackColor = Color.Gainsboro;
+                checkBox1.ForeColor = Color.FromArgb(0, 0, 0);
+                lblSettings.ForeColor = Color.FromArgb(0, 0, 0);
+                picSettings.BackgroundImage = Properties.Resources.settings_black;
             }
         }
     }
